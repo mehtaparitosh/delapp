@@ -1,0 +1,8 @@
+%center
+  %h1 Entries Table
+  %br
+  -# -if user_signed_in?
+  -#   = link_to 'Logout  ', destroy_user_session_path, method: :delete
+  %br
+  = link_to "New Field", new_entry_path
+%br

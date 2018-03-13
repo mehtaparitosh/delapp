@@ -1,0 +1,91 @@
+.form
+  = simple_form_for @entry do |f|
+    .month
+      = f.input :month, label: "Current Month"
+    %br
+    .heading
+      %h3 Inventory
+      %h4 Accuracy and Completeness of Asset Informatiion
+      .sub-heading
+        %p Percent of Inventory Completion (in %)
+        .form-inputs
+          = f.input :_1, label: "Networks"
+          = f.input :_2, label: "Servers"
+          = f.input :_3, label: "Endpoints"
+          = f.input :_4, label: "Database"
+          = f.input :_5, label: "Applications"
+      .sub-heading
+        %p Assets that are discoverable but not not found in "Source of Truth"
+        .form-inputs
+          = f.input :_6, label: "Unknown Assets"
+    %br
+    .heading
+      %h3 Security Baseline
+      %h4 Alignment with industry best practice
+      .sub-heading
+        %p Percent of Assets with Security Baseline
+        .form-inputs
+          = f.input :_7, label: "Networks"
+          = f.input :_8, label: "Servers"
+          = f.input :_9, label: "Endpoints"
+          = f.input :_10, label: "Database"
+      .sub-heading
+        %p Percent of Compliance with Baseline (in %)
+        .form-inputs
+          = f.input :_11, label: "Networks"
+          = f.input :_12, label: "Servers"
+          = f.input :_13, label: "Endpoints"
+          = f.input :_14, label: "Database"
+    %br
+    .heading
+      %h3 Identity and Access Management
+      %h4 Measure of Privileged Accounts
+      .sub-heading
+        .form-inputs
+          = f.input :_15, label: "Total Number of Admin Accounts"
+          = f.input :_16, label: "Number of 2FA Admin Accounts"
+          = f.input :_17, label: "Number of Admin Accounts Without Owner"
+    %br
+    .heading
+      %h3 Vulnerability Landscape
+      .sub-heading
+        %h4 Measure of Vulnerabilities in Infrastructure
+        %p Percent of assets with High and Critical Vulnerabilities
+        .form-inputs
+          = f.input :_18, label: "Networks"
+          = f.input :_19, label: "Servers"
+          = f.input :_20, label: "Endpoints"
+          = f.input :_21, label: "Database"
+          = f.input :_22, label: "Applications"
+      .sub-heading
+        %h4 Are we in Control?
+        %p Average time to Remidiate last cycle
+        .form-inputs
+          = f.input :_23, label: "Networks"
+          = f.input :_24, label: "Servers"
+          = f.input :_25, label: "Endpoints"
+          = f.input :_26, label: "Database"
+          = f.input :_27, label: "Applications"
+      .sub-heading
+        %h4 What is our Rask?
+        %p Average age of Open Vulnerabilities
+        .form-inputs
+          = f.input :_28, label: "Networks"
+          = f.input :_29, label: "Servers"
+          = f.input :_30, label: "Endpoints"
+          = f.input :_31, label: "Database"
+          = f.input :_32, label: "Applications"
+    %br
+    .heading
+      %h3 Monitoring
+      .sub-heading
+        %h4 Measure of Asset not being monitored
+        %p Percent of assets not monitored
+        .form-inputs
+          = f.input :_33, label: "Networks"
+          = f.input :_34, label: "Servers"
+          = f.input :_35, label: "Endpoints"
+          = f.input :_36, label: "Database"
+          = f.input :_37, label: "Applications"
+    %br
+    = f.button :submit
