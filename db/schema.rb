@@ -10,10 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180313145242) do
+ActiveRecord::Schema.define(version: 20180314154744) do
 
   create_table "entries", force: :cascade do |t|
-    t.string "month"
     t.float "_1"
     t.float "_2"
     t.float "_3"
@@ -54,6 +53,7 @@ ActiveRecord::Schema.define(version: 20180313145242) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "year"
+    t.integer "month"
   end
 
   create_table "users", force: :cascade do |t|
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(version: 20180313145242) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "is_admin", default: false
-    t.boolean "is_first", default: false
+    t.boolean "is_first", default: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
