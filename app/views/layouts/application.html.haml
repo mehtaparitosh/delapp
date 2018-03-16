@@ -6,9 +6,11 @@
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    -# %link{:href => "w3.css", :rel => "stylesheet"}/
+
   %body
-    %p.notice= notice
-    %p.alert= alert
-    -if user_signed_in?
-      = link_to 'Logout  ', destroy_user_session_path, method: :delete
-    = yield
+    -# %p.notice= notice
+    -# %p.alert= alert
+    .wrapper
+      = yield

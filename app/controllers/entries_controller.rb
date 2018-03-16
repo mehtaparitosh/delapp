@@ -12,9 +12,7 @@ class EntriesController < ApplicationController
       # format.xls
     end
   end
-  
-  def download
-  end
+
 
   def new
     @entry = Entry.new
@@ -41,7 +39,7 @@ class EntriesController < ApplicationController
       current_user.is_first = false
       current_user.save
       redirect_to edit_user_registration_path
-    elsif (@entry == nil) ||(@entry.month != Time.now.month)
+    elsif (@entry == nil) ||(@entry.month != (Time.now.month))
       redirect_to new_entry_path
     end
   end
