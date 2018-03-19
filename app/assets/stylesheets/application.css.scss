@@ -41,6 +41,7 @@ body {
   height: 100%;
   align-items: stretch;
   position:relative;
+  // background-color: #f8f8f8;
   // form fields
   input{
     color: #0F2648;
@@ -170,8 +171,9 @@ body {
   flex-direction: column;
   justify-content: flex-end;
 
-  .heading {
-    align-self: flex-start;
+  .done {
+    padding-bottom: 82%;
+    padding-left: 10%;
   }
 
   form {
@@ -179,31 +181,70 @@ body {
     color: #0F2648;
     .form {
       padding-bottom: 7%;
-      padding-left: 10.5%;
-      .form-inputs{
+      padding-left: 7%;
+
+
+      .heading {
+        margin-top: 15px;
+        margin-bottom: 20px;
+      }
+
+
+      .cards{
         display: flex;
-        .inventory {
-          // display: none;
-        }
-        .security-baseline {
-          display: none;
-        }
+        flex-direction: row;
+        align-items: stretch;
+        .card {
+          background-color: #f3f2f3;
+          // background-color: #EDECED;
 
-        .IAM {
-          display: none;
-        }
+          padding: 10px;
+          margin:10px 20px 10px 0px;
+          max-width: 280px;
 
-        .vulnerability-landscape {
-          display: none;
+          .form-inputs{
+            padding-top: 10px;
+            display: flex;
+            flex-direction: column;
+            input {
+              float: right;
+              width:  100px;
+              margin-top: -3px;
+              margin-bottom: 17px;
+              margin-right: 55px;
+            }
+          }
         }
+        .one {
+          // border-right: 2px solid #0F2648;
+        }
+      }
 
-        .monitoring {
-          display: none;
-        }
+
+
+      .inventory {
+        display: none;
+      }
+      .security-baseline {
+        // display: none;
+      }
+
+      .IAM {
+        display: none;
+      }
+
+      .vulnerability-landscape {
+        display: none;
+      }
+
+      .monitoring {
+        display: none;
       }
     }
     .submit {
-      background-color: #EDECED;
+      background-color: #f3f2f3;
+      // background-color: #EDECED;
+
       padding: 20px;
       // submit button
       input[type=submit]{
@@ -229,10 +270,9 @@ body {
         cursor:pointer;
       }
       input[type=submit]:hover,input[type=submit]:active{
-       background-color: #0F2648;
-       color: whitesmoke;
+        background-color: #0F2648;
+        color: whitesmoke;
       }
-
     }
   }
 }

@@ -1,0 +1,14 @@
+.navbar
+  .logo
+    = image_tag("logo.png", size: "160x160", alt: "Logo")
+  .links
+    %p#buttons
+      -if user_signed_in?
+        -# = link_to 'Logout', destroy_user_session_path, method: :delete, class: "btn btn-ghost"
+        - if current_user.is_admin == true
+          = link_to "Download", entries_path(format: 'xls'), class: "btn btn-ghost"
+.banner
+  .done
+    %h1 All Done :D
+    = link_to "Edit Sudmisssion", root_path
+    = link_to 'Logout', destroy_user_session_path, method: :delete, class: "btn btn-ghost"

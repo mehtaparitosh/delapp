@@ -1,38 +1,38 @@
 = simple_form_for @entry do |f|
   .form
-    .heading
-      %h1 Detailed Metrics
     .form-inputs
       .inventory
         .heading
-          %h3 Inventory
-          %h4 Accuracy and Completeness of Asset Informatiion
-          .sub-heading
-            %p Percent of Inventory Completion (in %)
+          %h2 Inventory
+          %h3 Accuracy and Completeness of Asset Informatiion
+        .cards
+          .card.one
+            %i Percent of Inventory Completion (in %)
             .form-inputs
               = f.input :_1, label: "Networks"
               = f.input :_2, label: "Servers"
               = f.input :_3, label: "Endpoints"
               = f.input :_4, label: "Database"
               = f.input :_5, label: "Applications"
-          .sub-heading
-            %p Assets that are discoverable but not not found in "Source of Truth"
+          .card
+            %i Assets that are discoverable but not not found in "Source of Truth"
             .form-inputs
               = f.input :_6, label: "Unknown Assets"
       %br
       .security-baseline
         .heading
-          %h3 Security Baseline
-          %h4 Alignment with industry best practice
-          .sub-heading
-            %p Percent of Assets with Security Baseline
+          %h2 Security Baseline
+          %h3 Alignment with industry best practice
+        .cards
+          .card.one
+            %i % of assets with security baseline (# of assets as a factor of whole estate, for which the baseline is Agreed. (Coverage)
             .form-inputs
               = f.input :_7, label: "Networks"
               = f.input :_8, label: "Servers"
               = f.input :_9, label: "Endpoints"
               = f.input :_10, label: "Database"
-          .sub-heading
-            %p Percent of Compliance with Baseline (in %)
+          .card
+            %i % of compliance with baseline (% of those controls, are compliant to the minimum threshold of the baseline.)
             .form-inputs
               = f.input :_11, label: "Networks"
               = f.input :_12, label: "Servers"
@@ -43,36 +43,38 @@
         .heading
           %h3 Identity and Access Management
           %h4 Measure of Privileged Accounts
-          .sub-heading
+        .cards
+          .card
             .form-inputs
-              = f.input :_15, label: "Total Number of Admin Accounts"
-              = f.input :_16, label: "Number of 2FA Admin Accounts"
-              = f.input :_17, label: "Number of Admin Accounts Without Owner"
+              = f.input :_15, label: "Total # of Admin Accounts"
+              = f.input :_16, label: "# of 2FA Admin Accounts"
+              = f.input :_17, label: "# of Admin Accounts Without Owner"
       %br
       .vulnerability-landscape
         .heading
           %h3 Vulnerability Landscape
-          .sub-heading
+        .cards
+          .card.one
             %h4 Measure of Vulnerabilities in Infrastructure
-            %i Percent of assets with High and Critical Vulnerabilities
+            %i % of assets with High and critical (4&5) vulnerabilities
             .form-inputs
               = f.input :_18, label: "Networks"
               = f.input :_19, label: "Servers"
               = f.input :_20, label: "Endpoints"
               = f.input :_21, label: "Database"
               = f.input :_22, label: "Applications"
-          .sub-heading
+          .card.one
             %h4 Are we in Control?
-            %i Average time to Remidiate last cycle
+            %i Average Time to Remediate last cycle (in # of days)
             .form-inputs
               = f.input :_23, label: "Networks"
               = f.input :_24, label: "Servers"
               = f.input :_25, label: "Endpoints"
               = f.input :_26, label: "Database"
               = f.input :_27, label: "Applications"
-          .sub-heading
+          .card
             %h4 What is our Rask?
-            %i Average age of Open Vulnerabilities
+            %i Average Age of Open Vulnerabilities (in # of days)
             .form-inputs
               = f.input :_28, label: "Networks"
               = f.input :_29, label: "Servers"
@@ -83,9 +85,10 @@
       .monitoring
         .heading
           %h3 Monitoring
-          .sub-heading
-            %h4 Measure of Asset not being monitored
-            %p Percent of assets not monitored
+          %h4 Measure of Asset not being monitored
+        .cards
+          .card
+            %i % of Assets not being monitored
             .form-inputs
               = f.input :_33, label: "Networks"
               = f.input :_34, label: "Servers"

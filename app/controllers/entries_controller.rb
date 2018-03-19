@@ -31,6 +31,8 @@ class EntriesController < ApplicationController
 
 
   def show
+    # sleep(10)
+    # redirect_to destroy_user_session_path
   end
 
   def edit
