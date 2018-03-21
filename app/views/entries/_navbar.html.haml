@@ -7,9 +7,19 @@
       - if current_user.is_admin == true
         = link_to "Download", entries_path(format: 'xls'), class: "btn btn-ghost"
 .nav-menu
-  %p#in Inventory
-  %p#s Security Baseline
+  %p#in
+    %i.fa.fa-angle-right
+    Inventory
+  %p#s
+    %i.fa.fa-angle-right
+    Security Baseline
   -# %p#id Identity and Access Management
-  %p#id IAM
-  %p#v Vulnerability Landscape
-  %p#m Monitoring
+  %p#id
+    %i.fa.fa-angle-right
+    IAM
+  %p#v
+    %i.fa.fa-angle-right
+    Vulnerability Landscape
+  %p#m
+    %i.fa.fa-angle-right
+    Monitoring

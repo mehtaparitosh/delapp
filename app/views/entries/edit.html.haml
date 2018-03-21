@@ -2,3 +2,53 @@
   =render 'navbar'
 .banner
   =render 'form'
+
+
+:javascript
+  $(document).ready(function(){
+      $(".inventory").show();
+      $(".security-baseline").hide();
+      $(".IAM").hide();
+      $(".vulnerability-landscape").hide();
+      $(".monitoring").hide();
+      $("#in").click(function(){
+          $(".inventory").show();
+          $(".security-baseline").hide();
+          $(".IAM").hide();
+          $(".vulnerability-landscape").hide();
+          $(".monitoring").hide();
+
+      });
+      $("#s").click(function(){
+          $(".inventory").hide();
+          $(".security-baseline").show();
+          $(".IAM").hide();
+          $(".vulnerability-landscape").hide();
+          $(".monitoring").hide();
+
+      });
+      $("#id").click(function(){
+          $(".inventory").hide();
+          $(".security-baseline").hide();
+          $(".IAM").show();
+          $(".vulnerability-landscape").hide();
+          $(".monitoring").hide();
+
+      });
+      $("#v").click(function(){
+          $(".inventory").hide();
+          $(".security-baseline").hide();
+          $(".IAM").hide();
+          $(".vulnerability-landscape").show();
+          $(".monitoring").hide();
+
+      });
+      $("#m").click(function(){
+          $(".inventory").hide();
+          $(".security-baseline").hide();
+          $(".IAM").hide();
+          $(".vulnerability-landscape").hide();
+          $(".monitoring").show();
+
+      });
+  });
